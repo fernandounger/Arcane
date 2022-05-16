@@ -1,0 +1,189 @@
+:root {
+	--blue-color: #0080C8;
+	--white-color: #FFFFFF;
+	--gray-color: #E7E7E7;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: 0;
+}
+
+body {
+	max-width: 1366px;
+	height: 100vh;
+	background: url('../img/wallpaper.png') no-repeat 50% 50%;
+	background-size: cover;
+	overflow-x: hidden;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+header .header__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: 20rem;
+}
+
+/*Buttons header and section*/
+header .header__container .header__button,
+section .section__container .arcane__button {
+	display: flex;
+	gap: 1.6rem;
+
+}
+
+header .header__container .header__button button,
+section .section__container .arcane__button button {
+	color: var(--white-color);
+	font-size: clamp(0.75rem, 0.6128rem + 0.5854vw, 1.125rem);
+	line-height: 1.25rem;
+	font-weight: 600;
+	font-family: 'Nunito', sans-serif;
+	height: 2.563rem;
+	border-radius: 3px;
+	padding: 8px 32px;
+	cursor: pointer;
+	width: fit-content;
+}
+
+header .header__button .btninscreva,
+section .section__container .arcane__button .btnaviseme {
+	background-color: var(--blue-color);
+	width: 11.5rem;
+}
+
+header .header__button .btnentrar,
+section .section__container .arcane__button .btnadicionar {
+	border: 2px solid var(--white-color);
+	background-color: transparent;
+}
+
+section .section__container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	font-family: 'Montserrat', sans-serif;
+	color: var(--white-color);
+}
+
+section .section__container .container__arcane .arcane__button {
+	margin-top: 1.25rem;
+}
+
+section .section__container .container__arcane .arcane__text .arcane__title,
+.arcane__subtitle {
+	font-weight: 800;
+	font-size: clamp(4.25rem, -2rem + 26.6667vw, 8rem);
+	line-height: 8.625rem;
+}
+
+section .section__container .container__arcane .arcane__subtitle {
+	color: transparent;
+	font-family: sans-serif;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: var(--gray-color)
+}
+
+section .section__container .container__trailer {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	font-weight: 400;
+	line-height: 29px;
+	transition: 0.2s;
+}
+
+section .section__container .container__trailer .trailer__image {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	transition: 0.2s;
+}
+
+footer {
+	font-family: 'Nunito', sans-serif;
+	margin: 0 auto;
+}
+
+footer .footer__social {
+	width: max(1050px);
+	display: flex;
+	gap: 4rem;
+	color: var(--white-color);
+	font-weight: 400;
+	font-size: clamp(0.75rem, 0.5671rem + 0.7805vw, 1.25rem);
+	line-height: 29px;
+}
+
+footer .footer__social .social {
+	display: flex;
+	gap: 2.5rem;
+}
+
+@media (max-width:1080px) {
+
+	header .header__container {
+		gap: 0;
+	}
+
+	section .section__container .container__trailer {
+		display: none;
+	}
+
+	footer .footer__social {
+		width: auto;
+	}
+}
+
+@media (max-width:650px) {
+	body {
+		background-blend-mode: darken;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	header .header__container {
+		display: block;
+	}
+
+	header .header__container .header__image {
+		margin-left: 50px;
+	}
+
+	header .header__container .header__button {
+		display: none;
+	}
+
+	section .section__container .arcane__button {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	section .section__container .arcane__button .btnaviseme,
+	section .section__container .arcane__button .btnadicionar {
+		width: auto;
+	}
+
+	footer .footer__social p strong {
+		display: none;
+	}
+
+	footer .footer__social {
+		display: block;
+		gap: 0;
+	}
+}
+
+@media(max-width:500px) {
+
+	section .section__container .container__arcane .arcane__text .arcane__title,
+	.arcane__subtitle {
+		line-height: max(83px);
+	}
+}
